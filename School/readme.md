@@ -2,6 +2,11 @@ README
 
 -------------------------------------------------------------------------------------------------------------
 About: Sample assessment for King Price interview process
+
+
+A simple REST API that sits on top of a Code-First Database implementation.
+
+Interaction with the API can be done via running the project - and accessing the default web page that will load a Swagger UI.
 -------------------------------------------------------------------------------------------------------------
 
 Implementation details:
@@ -9,11 +14,11 @@ Implementation details:
 1. Clean architecture used for separation of concerns
 2. Repository pattern used to provide abstraction of underlying details of the data storage and details thereof
 3. Mediatr pattern used to reduce dependencies between objects
-4. Builder pattern to build up complex object of smaller pieces
-5. Added OpenAPI documentation and a Swagger UI to easily visualize and describe REST endpoints available
+4. Builder pattern to build up complex objects of smaller pieces
+5. Added OpenAPI documentation and a Swagger UI to easily visualize and describe REST endpoints available and interact with it (instead of a fully fledged UI)
 6. Added AutoMapper to reduce dependency on DB models for the presentation layer
 7. Enabled EF data migrations for ease of DB maintainability (especially since this is code-first)
-8. Use host environment details to pull in relevant config file (appsetting)
+8. Use host environment details to pull in relevant config file (appsettings)
 9. Did not build fully fledged UI (time constraints), use Swagger UI on project run to perform REST API calls
    
 What can still be added?
@@ -32,7 +37,8 @@ What can still be added?
 12. Can add more repositories if needed
 13. Additional validations for duplicate user checks
 14. Pre-commit hooks for git to prevent sensitive config from being comitted
-
+15. A full fledged UI (Angular etc.), that will present data to the user and allow them to interact with it in a user friendly way.
+16. A potential API gateway that sits between the UI and REST API
 -------------------------------------------------------------------------------------------------------------
 To create DB migration: 
 -------------------------------------------------------------------------------------------------------------
@@ -86,3 +92,4 @@ Replace "ConnectionStrings.SqlServer" to the connection string of a DB used for 
 - In the Package Manager Console run: Update-Database
 
 -------------------------------------------------------------------------------------------------------------
+
